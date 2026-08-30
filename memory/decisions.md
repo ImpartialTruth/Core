@@ -1,5 +1,45 @@
 # Decision Log
 
+## 2026-08-30 Iteration 0 built: Next.js scaffold + ASCENT landing page
+**Decision:** Scaffolded the frontend in `web/` (Next.js App Router,
+TypeScript, Tailwind v4) rather than at repo root, since the repo root also
+holds `docs/`, `memory/`, `.claude/`. Installed the official `frontend-design`
+skill (anthropics/skills) into `.claude/skills/` and used it to design and
+build the iteration-0 landing page: dark ink/steel palette with a two-stop
+rise→flare (cyan→red-orange) signal accent tied to actual crash-game risk
+color conventions, Space Grotesk (display) + IBM Plex Sans (body) + IBM Plex
+Mono (data) type system, and a signature animated "tension curve" (an
+SVG/CSS looping rise-then-crash animation) as the hero's centerpiece —
+chosen because it's literally the mechanic these games are built on, not a
+decorative flourish. Used placeholder brand name "ASCENT" (ties to the
+rising-curve motif, clearly marked as swappable in the footer and README)
+since no real studio name exists yet.
+**Why:** User asked to start iteration 0 (landing page, zero backend) using
+the frontend-design tools saved earlier, deployable to Vercel for testing.
+**Verification:** `npm run build` and `npm run lint` both clean; visually
+checked via Playwright screenshots at desktop (1440px) and mobile (390px)
+in both dev and production (`next start`) mode; confirmed Next.js's dev-only
+indicator does not appear in production.
+**Alternatives rejected:** scaffolding at repo root (would mix Next.js
+tooling with docs/memory/.claude); Phaser/raw Canvas for the curve (see
+earlier engine decision).
+**Still open:** actual Vercel deploy not performed from this session (no
+Vercel credentials available here) — see open-questions.md. Real brand name
+still needed before any public/provider-facing use.
+---
+
+## 2026-08-30 Backend = .NET (separate repo), iteration 0 = landing page only
+**Decision:** Backend will be built in .NET, in its own repo (not yet
+created/linked) — not needed yet. Work starts with the visual side only,
+zero backend integration. Iteration 0 scope: a landing page, built to be
+deployed to Vercel for testing/preview.
+**Why:** User wants to validate the visual direction and get something
+live before any backend work exists — de-risks the "which stack/design"
+questions before dotnet backend work starts.
+**Alternatives rejected:** none — explicit user sequencing choice.
+**Still open:** .NET backend repo not yet created/linked (see open-questions.md).
+---
+
 ## 2026-08-30 Project scope: iGaming frontend, React + PixiJS
 **Decision:** `Core` is the frontend-only repo for an iGaming games platform —
 visual game clients (mini-games, crash games, survival-themed instant games)

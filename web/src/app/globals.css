@@ -1,0 +1,178 @@
+@import "tailwindcss";
+
+:root {
+  --ink: #0a0d12;
+  --steel: #151a22;
+  --steel-line: #232a36;
+  --mist: #8b94a3;
+  --paper: #f2f4f7;
+  --rise: #35e8c0;
+  --flare: #ff5a3c;
+}
+
+@theme inline {
+  --color-ink: var(--ink);
+  --color-steel: var(--steel);
+  --color-steel-line: var(--steel-line);
+  --color-mist: var(--mist);
+  --color-paper: var(--paper);
+  --color-rise: var(--rise);
+  --color-flare: var(--flare);
+  --font-display: var(--font-space-grotesk);
+  --font-body: var(--font-plex-sans);
+  --font-data: var(--font-plex-mono);
+}
+
+body {
+  background: var(--ink);
+  color: var(--paper);
+}
+
+::selection {
+  background: var(--flare);
+  color: var(--ink);
+}
+
+:focus-visible {
+  outline: 2px solid var(--rise);
+  outline-offset: 3px;
+}
+
+.curve-draw {
+  animation: curve-draw 6.5s cubic-bezier(0.33, 0, 0.2, 1) infinite;
+}
+
+@keyframes curve-draw {
+  0% {
+    stroke-dashoffset: 1;
+  }
+  62% {
+    stroke-dashoffset: 0;
+  }
+  72% {
+    stroke-dashoffset: 0;
+  }
+  74% {
+    stroke-dashoffset: 1;
+  }
+  100% {
+    stroke-dashoffset: 1;
+  }
+}
+
+.curve-pulse {
+  animation: curve-pulse 6.5s ease-in-out infinite;
+  transform-origin: 950px 388px;
+}
+
+@keyframes curve-pulse {
+  0%,
+  58% {
+    opacity: 0;
+    transform: scale(0.6);
+  }
+  68% {
+    opacity: 1;
+    transform: scale(1.15);
+  }
+  74% {
+    opacity: 0;
+    transform: scale(1.6);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(0.6);
+  }
+}
+
+.mechanic-crash-draw {
+  animation: mechanic-crash-draw 4s cubic-bezier(0.33, 0, 0.2, 1) infinite;
+}
+
+@keyframes mechanic-crash-draw {
+  0% {
+    stroke-dashoffset: 1;
+  }
+  70% {
+    stroke-dashoffset: 0;
+  }
+  80% {
+    stroke-dashoffset: 0;
+  }
+  85% {
+    stroke-dashoffset: 1;
+  }
+  100% {
+    stroke-dashoffset: 1;
+  }
+}
+
+.mechanic-instant-ring {
+  transform-origin: 100px 50px;
+  animation: mechanic-instant-ring 1.8s ease-out infinite;
+}
+
+@keyframes mechanic-instant-ring {
+  0% {
+    transform: scale(0.3);
+    opacity: 0.8;
+  }
+  100% {
+    transform: scale(2.2);
+    opacity: 0;
+  }
+}
+
+.mechanic-survival-fill {
+  width: 176px;
+  animation: mechanic-survival-fill 5s ease-in-out infinite;
+}
+
+@keyframes mechanic-survival-fill {
+  0% {
+    width: 176px;
+  }
+  45% {
+    width: 26px;
+  }
+  55% {
+    width: 26px;
+  }
+  100% {
+    width: 176px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  .curve-draw {
+    animation: none !important;
+    stroke-dashoffset: 0.08 !important;
+  }
+
+  .curve-pulse {
+    display: none;
+  }
+
+  .mechanic-crash-draw {
+    animation: none !important;
+    stroke-dashoffset: 0.1 !important;
+  }
+
+  .mechanic-instant-ring {
+    display: none;
+  }
+
+  .mechanic-survival-fill {
+    animation: none !important;
+    width: 176px !important;
+  }
+}
