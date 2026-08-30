@@ -1,5 +1,24 @@
 # Decision Log
 
+## 2026-08-30 Project scope: iGaming frontend, React + PixiJS
+**Decision:** `Core` is the frontend-only repo for an iGaming games platform —
+visual game clients (mini-games, crash games, survival-themed instant games)
+to pitch to providers/aggregators and take through licensing. Backend
+(RNG, wallet, game logic) will live in a separate repo. Stack: React for the
+app shell (nav, balance, menus) + PixiJS for the actual game rendering
+canvas, one self-contained PixiJS module per game.
+**Why:** User's stated goal — build a game portfolio for providers, code
+needs to be clean/standards-compliant for licensing audits. PixiJS chosen
+over Phaser and raw Canvas because the roster is many varied small games
+(not one deep game) — PixiJS is a lean WebGL 2D renderer, the de facto
+standard for iGaming instant-games (e.g. Aviator-style crash games), and
+doesn't impose Phaser's heavier per-game framework opinions.
+**Alternatives rejected:** Phaser (too opinionated/heavy per game for a
+multi-game roster); raw Canvas (reinvents what PixiJS already solves).
+**Still open:** target license/market, first game titles, backend repo link
+— see open-questions.md.
+---
+
 ## 2026-08-30 Install project-memory skill as the repo's first commit
 **Decision:** Bootstrap the empty `ImpartialTruth/Core` repo with the
 `project-memory` Claude Code skill (from ImpartialTruth/project-memory-skill)
