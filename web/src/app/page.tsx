@@ -53,7 +53,7 @@ export default function Home() {
       <header className="sticky top-0 z-40 border-b border-steel-line/60 bg-ink/85 backdrop-blur">
         <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4 sm:px-10">
           <span className="font-display text-lg font-semibold tracking-tight text-paper">
-            ASCENT
+            REDLINE
           </span>
           <nav className="flex items-center gap-6 font-data text-xs uppercase tracking-widest text-mist">
             <a href="#games" className="transition-colors hover:text-paper">
@@ -85,7 +85,7 @@ export default function Home() {
               We build the ones worth riding.
             </h1>
             <p className="mt-6 max-w-xl text-lg leading-relaxed text-mist">
-              ASCENT designs and builds the frontend for crash, instant, and
+              RedLine designs and builds the frontend for crash, instant, and
               survival-format games — ready to hand to a provider, ready for
               licensing review.
             </p>
@@ -184,9 +184,9 @@ export default function Home() {
       <footer className="border-t border-steel-line/60">
         <div className="mx-auto flex max-w-6xl flex-col gap-2 px-6 py-8 text-xs text-mist sm:flex-row sm:items-center sm:justify-between sm:px-10">
           <span className="font-display tracking-tight text-paper">
-            ASCENT
+            REDLINE
           </span>
-          <span>Placeholder name — swap before this ships publicly.</span>
+          <span>© {new Date().getFullYear()} RedLine.</span>
         </div>
       </footer>
     </>

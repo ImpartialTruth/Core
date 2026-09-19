@@ -1,5 +1,6 @@
 ## Project Soul
 
+**Brand:** RedLine.
 **What:** iGaming frontend — visual game clients only (slots-adjacent mini-games,
 crash games, and survival-themed instant games), built to pitch to game
 providers/aggregators and to pursue licensing certification.

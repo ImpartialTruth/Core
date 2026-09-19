@@ -21,9 +21,9 @@ const plexMono = IBM_Plex_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "ASCENT — iGaming frontend studio",
+  title: "RedLine — iGaming frontend studio",
   description:
-    "ASCENT designs and builds the frontend for crash, instant, and survival-format games — ready to hand to a provider, ready for licensing review.",
+    "RedLine designs and builds the frontend for crash, instant, and survival-format games — ready to hand to a provider, ready for licensing review.",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {

@@ -1,8 +1,8 @@
 # web
 
-Frontend for the ASCENT (placeholder name) iGaming platform — visual game
-clients only. Backend (RNG/wallet/game-logic, .NET) lives in a separate repo
-and is not wired up yet.
+Frontend for the RedLine iGaming platform — visual game clients only.
+Backend (RNG/wallet/game-logic, .NET) lives in a separate repo and is not
+wired up yet.
 
 Stack: Next.js (App Router) + React for the app shell, PixiJS for game
 rendering, Tailwind CSS v4, TypeScript.

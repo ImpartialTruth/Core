@@ -1,5 +1,34 @@
 # Decision Log
 
+## 2026-09-19 Brand name set: RedLine
+**Decision:** Real brand name is "RedLine," replacing the placeholder
+"ASCENT" everywhere — `web/` landing page (nav mark, hero copy, metadata
+title/description, footer), `web/README.md`, and CLAUDE.md's Project Soul
+(added a **Brand** field).
+**Why:** User proposed it. Strong fit with the existing design system built
+in iteration 0 — "redline" (an engine's max-RPM limit before failure) is the
+same idea as a crash-game multiplier climbing until it breaks, and the
+palette already used red/flare as the "risk" accent color — name and visual
+identity now reinforce each other instead of being arbitrary.
+**Alternatives rejected:** keeping "ASCENT" (also thematically fine, but
+user preferred RedLine once proposed — no reason to override that).
+**Verification:** `npm run build` and `npm run lint` clean after the rename.
+---
+
+## 2026-09-15 Published ASCENT landing page as an interactive Artifact
+**Decision:** Since the user asked to see the iteration-0 design directly
+in-session ("მინდა რომ მანახო აქ"), rebuilt the `web/` landing page as a
+static, self-contained HTML Artifact (same tokens, type system, and
+tension-curve animation, no React/build step) and published it, rather than
+only sending static screenshots.
+**Why:** Artifacts render live/interactively inside the conversation, so the
+user could see the actual motion design, not just a flat image.
+**Note:** No repo changes this session — this was a design-review artifact,
+not a code change. Session ended without an explicit "save session"; this
+entry (and the daily log) reconstructs it from this conversation's own
+visible history, since no other transcript was recoverable.
+---
+
 ## 2026-08-30 Iteration 0 built: Next.js scaffold + ASCENT landing page
 **Decision:** Scaffolded the frontend in `web/` (Next.js App Router,
 TypeScript, Tailwind v4) rather than at repo root, since the repo root also
